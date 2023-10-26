@@ -26,11 +26,10 @@ header img {
     width: 15%;
 }
 
-/*
-#lista {
-    width: 80%;
-    margin: 0 auto;
-} */
+
+.lista {
+    border-left: solid 2px #ffc75661;
+}
 
 #main figure {
     text-align: center;
@@ -67,8 +66,9 @@ h6 {
 }
 
 .immagine {
-    width: 110%;
+    width: 120%;
     text-align: center;
+    box-shadow: 5px 5px 5px #dedede;
 }
 
 figcaption {
@@ -76,5 +76,3 @@ figcaption {
     text-align: center;
     font-size: 8px;
 }
-
-
