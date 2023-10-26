@@ -7,17 +7,19 @@ html, body {
 
 body {
     background-image: url(../img/sfondo.png);
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
+
 /* HEADER */
-/* #backgroundheader {
-    background-color:rgb(0, 114, 171);
-}
-*/
 .logo {
         width: 50%;
 
 }
 
+header {
+    text-align: center;
+}
 
 /* MAIN */
 
@@ -31,7 +33,6 @@ b {
 
 #sottotitolo {
     color: #ababab;
-    display: inline;
 }
 
 #box1 {
@@ -54,12 +55,21 @@ b {
     padding: 20px;
 }
 
+.grey-box {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #E3E3E3;
+}
+
 /* TABELLE */
 table {
     border: 0 auto;
     border-collapse: collapse;
-    width: 30%;
+    width: 20%;
     margin: 0 auto;
+    text-align: left;
 }
 
 td {
@@ -89,7 +99,8 @@ hr {
 
 /*VIDEO*/
 iframe {
-    border-radius: 10%;
+    border-radius: 20px;
+    width: 100%;
 }
 
 /* FORM */
