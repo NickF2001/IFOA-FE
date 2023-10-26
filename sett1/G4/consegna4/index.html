@@ -39,10 +39,10 @@
 
         <h2>Come creare un template per i post</h2>
         <div id="sottotitolo">
-          <i class="fa-solid fa-square-pen"></i>
-          <p>di Mario Rossi -</p>
-          <i class="fa-solid fa-clock"></i>
-          <p>pubblicato il 25-10-2020</p>
+          <p>
+          <i class="fa-solid fa-square-pen"></i> di Mario Rossi -
+          <i class="fa-solid fa-clock"></i> pubblicato il 25-10-2020
+        </p>
         </div>
 
         <article>
@@ -81,17 +81,18 @@
 
         <article>
           <div id="top-tabella">
-          <p><i>Diffusione dei CSS</i></p>
-          </div>
-
           <table>
-            <tbody>
+            <caption>
+              <strong>Diffusione dei CSS</strong>
+            </caption>
+            <thead>
             <tr>
               <td>Anno</td>
               <td>% di utilizzo</td>
               <td>Supporto browsers</td>
             </tr>
-
+            </thead>
+            <tbody>
             <tr>
             <td>2000</td>
             <td>20%</td>
@@ -124,11 +125,10 @@
                   </tbody>
           </table>
         </article>
-        <hr />
 
         <article>
           <div>
-          <p>Un test di validazione potrà essere fatto tramite il <a>tool online</a> dedicato allo scopo. Una volta ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed essere stati dei veri developers come loro:</p>
+          <p>Un test di validazione potrà essere fatto tramite il <a href="https://jigsaw.w3.org/css-validator/" target="_blank">tool online</a> dedicato allo scopo. Una volta ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed essere stati dei veri developers come loro:</p>
           </div>
           <div>
             <iframe width="300" height="300" src="https://www.youtube.com/embed/dvOvHXruEDM"
@@ -141,9 +141,18 @@
         <div class="grey-box">
           <h3>NOVITA'</h3>
           <p>Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter:</p>
-          <form>
 
-          </form>
+          <div id="form">
+
+           <form action="action.php" method="POST">
+            <fieldset>
+               <label for="email"></label>
+        <input type="email" id="email" name="email" placeholder="Inserisci una mail" required />
+          
+          <button>Iscriviti!</button>
+        </fieldset>
+      </form>
+          </div>
         </div>
 
       </main>
@@ -151,8 +160,33 @@
        <aside>
         <div class="grey-box">
           <h3>ARTICOLI CORRELATI</h3>
-          <p><a>Validare il codice html</a></p>
-          <i></i>
+          <div>
+          <p><a href="post.html">Validare il codice html</a></p>
+          <p><i class="fas fa-tag"></i> Categoria: develop</p>
+        </div>
+        <div id="calendar">
+          <p><i class="fa-solid fa-calendar-days"></i> Data 18-09-2020</p>
+        </div>
+        </div>
+
+        <div class="grey-box">
+          <div>
+          <p><a href="post.html">Correggere la sintatti</a></p>
+          <p><i class="fas fa-tag"></i> Categoria: develop</p>
+        </div>
+        <div id="calendar">
+          <p><i class="fa-solid fa-calendar-days"></i> Data 16-09-2020</p>
+        </div>
+        </div>
+
+        <div class="grey-box">
+          <div>
+          <p><a href="post.html">Meno Kb nella pagina</a></p>
+          <p><i class="fas fa-tag"></i> Categoria: ottimizzazione</p>
+        </div>
+        <div id="calendar">
+          <p><i class="fa-solid fa-calendar-days"></i> Data 30-09-2020</p>
+        </div>
         </div>
 
        </aside>
@@ -160,12 +194,14 @@
     </div>
 
      <footer id="box3">
+      
       <div>
         <p>Blog Epicode 2021</p>
         <p>Testata online di Mario Rossi, registrata con prot. n.213/2018 - via Luigi Einaudi 2 - Milano.
-          P.IVA 00112233. <a>info@epicode.school</a>
+          P.IVA 00112233. <a href="mailto:info@epicode.school">info@epicode.school</a>
         </p>
       </div>
+      
      </footer>
 
   </body>

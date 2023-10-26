@@ -14,6 +14,7 @@ body {
 /* HEADER */
 .logo {
         width: 50%;
+        margin-bottom: 20px;
 
 }
 
@@ -21,9 +22,13 @@ header {
     text-align: center;
 }
 
+li {
+    list-style: none;
+}
+
 /* MAIN */
 
-b {
+b, .epicode {
     color: purple;
 }
 
@@ -76,25 +81,37 @@ td {
     border: 1px solid white;
 }
 
-table tr:first-child {
+
+thead tr:first-child {
+    background-color: blue;
+    color: white;
+}
+
+
+caption {
+    background-color: white;
+    color: black;
+}
+
+thead tr {
     background-color: blue;
     color: white;
 }
 
 table tr:nth-child(even) {
-    background-color: white;
+    background-color: rgb(230, 230, 230);
 }
 
 tr:nth-child(odd) {
-    background-color: rgb(230, 230, 230);
+    background-color: white;
 }
 
 #top-tabella {
     text-align: center;
 }
 
-hr {
-    border-color: blue;
+tbody tr:last-of-type {
+    border-bottom: 2px solid #3f6bca;
 }
 
 /*VIDEO*/
@@ -105,6 +122,45 @@ iframe {
 
 /* FORM */
 
+#form {
+    display: inline;
+}
+
+fieldset {
+    border: solid #E3E3E3;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+a {
+    color: blue;
+}
+
+#email {
+    border: none;
+}
+
 /* ELEMENTI NELL' ASIDE */
 
+.fas, .fa-solid {
+    color: #000000;
+}
+
+#calendar {
+    text-align: right;
+}
+
 /* FOOTER */
+
+footer {
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: fuchsia;
+}
