@@ -28,7 +28,7 @@ body {
 }
 
 #bigger, h2 {
-    font-size: 1.8em;
+    font-size: 2em;
 }
 
 /* HEADER */
@@ -46,12 +46,14 @@ body {
 }
 
 /* MAIN */
+
 /*description*/
 .description {
     background-image: url(../images/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+    padding: 30px;
 }
 
 button {
@@ -119,10 +121,10 @@ a {
 }
 
 hr {
-    width: 40%;
+    width: 100%;
 }
 
-.footer {
+.lighter {
     font-weight: lighter;
 }
 
