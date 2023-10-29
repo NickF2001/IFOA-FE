@@ -7,11 +7,15 @@ html, body {
 
 body {
     background-image: url(../img/sfondo.png);
+   /* background-size: auto; */
+    background-repeat: repeat;
+    background-position: top;
     font-family: 'Merriweather', serif;
     font-family: 'Poppins', sans-serif;
 }
 
 /* HEADER */
+
 .logo {
         width: 50%;
         margin-bottom: 20px;
@@ -22,11 +26,30 @@ header {
     text-align: center;
 }
 
-li {
+
+dl {
     list-style: none;
 }
 
+header .fa-solid {
+    color: white;
+}
+
+header {
+    color: white;
+}
+
 /* MAIN */
+p .fa-solid {
+    color: #ababab;
+}
+
+samp {
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    background-color: #ededed;
+    font-family: 'Poppins', sans-serif;
+}
 
 b, .epicode {
     color: purple;
@@ -83,7 +106,7 @@ td {
 
 
 thead tr:first-child {
-    background-color: blue;
+    background-color: rgb(65, 65, 255);
     color: white;
 }
 
@@ -94,7 +117,7 @@ caption {
 }
 
 thead tr {
-    background-color: blue;
+    background-color: rgb(65, 65, 255);
     color: white;
 }
 
@@ -131,7 +154,7 @@ fieldset {
 }
 
 button {
-    background-color: blue;
+    background-color: rgb(95, 95, 255);
     color: white;
     border: none;
 }
@@ -141,7 +164,10 @@ a {
 }
 
 #email {
-    border: none;
+    border-top: white;
+    border-left: white;
+    border-right: white;
+    border-bottom: 2px dotted #767777; 
 }
 
 /* ELEMENTI NELL' ASIDE */
