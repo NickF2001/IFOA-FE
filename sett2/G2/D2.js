@@ -220,7 +220,9 @@ if (pari % 2 === 0) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let val = 12;
-if (val < 10) {
+if (val < 5) {
+  document.getElementById('logica').innerHTML = val + ' è minore di 5';
+} else if (val < 10) {
   document.getElementById('logica').innerHTML = val + ' è minore di 10';
 } else {
   document.getElementById('logica').innerHTML = val + ' è maggiore di 10';
@@ -245,6 +247,7 @@ const me2 = {
 }
 
 me2.city = 'Toronto';
+console.log(me2);
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
@@ -258,21 +261,45 @@ const me3 = {
 }
 
 delete me3.lastName;
+console.log(me3);
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const me4 = {
+  name: 'John',
+  lastName: 'Doe',
+  skills: ['javascript', 'html', 'css'],
+}
+
+delete me.skills[2];
+console.log(me4); // Non è proprio corretta
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let myArray = [];
+myArray[0] = 1;
+myArray[1] = 2;
+myArray[2] = 3;
+myArray[3] = 4;
+myArray[4] = 5;
+myArray[5] = 6;
+myArray[6] = 7;
+myArray[7] = 8;
+myArray[8] = 9;
+myArray[9] = 10;
+
+console.log(myArray); // Metodo molto didattico che non viene usato solitamente
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+myArray[9] = 100;
+console.log(myArray);
