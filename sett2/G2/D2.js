@@ -303,3 +303,4 @@ console.log(myArray); // Metodo molto didattico che non viene usato solitamente
 /* SCRIVI QUI LA TUA RISPOSTA */
 myArray[9] = 100;
 console.log(myArray);
+
