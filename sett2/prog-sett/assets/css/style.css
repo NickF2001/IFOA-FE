@@ -124,7 +124,26 @@ main {
 
 /* FOOTER */
 
+footer {
+    text-align: center;
+}
+
 .footer1 {
     background-color: #364759;
 }
 
+.footer1 p {
+    display: inline-block;
+    color: white;
+    margin-left: 10px;
+    font-size: 0.7em;
+}
+
+footer img {
+    width: 10%;
+    padding-top: 30px;
+}
+
+.imagefooter {
+    background-color: #222F3F;
+}
