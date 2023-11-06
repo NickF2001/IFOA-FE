@@ -120,7 +120,6 @@ for (i = 0; i < var1.length; i++) {
 console.log(var2);
 */
 
-
 for (let i = 0; i < starWarsCharacters.length; i++) { // Questo si chiama ciclare l'array
   characters.push(starWarsCharacters[i].name);
 }
@@ -209,7 +208,7 @@ console.log(crewMass);
 
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
-
+/*
 if (crewMass < 500) {
   console.log('Ship is under loaded');
 } else if (crewMass > 500) {
@@ -221,6 +220,7 @@ if (crewMass < 500) {
 } else if (crewMass > 1000) {
   console.log('DANGER! OVERLOAD ALERT: escape from ship now!');
 }
+*/
 
 switch (true) {
   case crewMass > 1000:

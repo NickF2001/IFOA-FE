@@ -10,6 +10,7 @@ function area(l1, l2) {
     return;
 }
 
+console.log('Es1');
 area(2, 4);
 
 /* ESERCIZIO 2
@@ -31,7 +32,22 @@ if (num1 !== num2) {
 return;
 }
 
+console.log('Es2');
 console.log(crazySum(4, 4));
+
+// funzione fatta col prof:
+/*
+function crazySum(numero1, numero2) {
+    let somma = numero1 + numero2;
+    if (numero1 === numero2) {
+        somma *= 3;
+    }
+    return somma;
+}
+
+console.log('Es2');
+console.log(crazySum(5,6));
+*/
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
@@ -50,6 +66,7 @@ function crazyDiff(x) {
     }
 }
 
+console.log('Es3');
 console.log(crazyDiff(2));
 
 /* ESERCIZIO 4
@@ -60,18 +77,15 @@ console.log(crazyDiff(2));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function boundary(n) {
-    if (n > 20 && n < 100 && n === 400) {
-        true;
-        console.log('true');
-        return;
+    if (n >= 20 && n <= 100 || n === 400) {
+        return true;
     } else {
-        false;
-        console.log('false');
-        return;
+        return false;
     }
 }
 
-boundary(2);
+console.log('Es4');
+console.log(boundary(2));
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -83,19 +97,16 @@ boundary(2);
 // strcpy("");
 
 function epify(stringa) {
-    if (stringa.indexOf('EPICODE') === 0) {
-        vero = 'EPICODE' + stringa;
-        console.log(vero);
-        return;
-    } else if (stringa.indexOf('EPICODE') !== 0) {
-        falso = stringa.slice(1);
-        console.log(falso);
-        return;
+    if (stringa.startsWith('EPICODE')) {
+        return stringa;
+    } else {
+        return 'EPICODE' + stringa;
     }
 }
 
-epify ('corso front end developer');
-
+console.log('Es5');
+console.log(epify ('EPICODE corso front end developer'));
+console.log(epify ('corso front end developer'));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
@@ -105,15 +116,19 @@ epify ('corso front end developer');
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function check3and7(numero) {
-    if (numero > 1) {
-        if (numero % 3 === 0) {
+    numero = Math.abs(numero);
+    if (numero % 3 === 0 && numero % 7 === 0) {
+        console.log('Multiplo sia di 3 che di 7');
+    } else if (numero % 3 === 0) {
             console.log('Multiplo di 3');
         } else if (numero % 7 === 0) {
             console.log('Multiplo di 7');
+        } else {
+            console.log('Non multiplo di 3 o di 7');
         }
-    }
 }
 
+console.log('Es6');
 check3and7(9);
 
 /* ESERCIZIO 7
@@ -125,11 +140,12 @@ check3and7(9);
 function reverseString(pippo) {
     let lista = pippo.split('');
     let reverseArray = lista.reverse(lista);
-    let joinArray = reverseArray.join('');
+    let joinArray = reverseArray.join(''); // join = inverso di split
     console.log(joinArray);
     return;
 }
 
+console.log('Es7');
 reverseString('epicode');
 
 /* ESERCIZIO 8
@@ -138,15 +154,31 @@ reverseString('epicode');
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+/*
 function upperFirst(words) {
-    //words.toUpperCase().charAt(0).substring(1);
     let upper = words.charAt(0).toUpperCase() + words.slice(1);
     console.log(upper);
     return;
 }
 
 upperFirst('ciao a tutti!');
+*/
+
+function upperFirst(stringa) {
+    let arrayFrase = stringa.split(' ');
+    let risultato = [];
+    for (let i = 0; i < arrayFrase.length; i++) {
+        let prima = arrayFrase[i].charAt(0);
+        let parolaTagliata = arrayFrase[i].slice(1);
+        let parolaFinale = prima.toUpperCase() + parolaTagliata;
+        risultato.push(parolaFinale);
+    }
+    return risultato.join(' ');
+}
+
+console.log('Es8');
+console.log(upperFirst('ciao a tutti'));
+
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
@@ -156,7 +188,7 @@ upperFirst('ciao a tutti!');
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function cutString(text) {
-    let cutting = text.slice(1, -1)
+    let cutting = text.slice(1, text.length -1)
     console.log(cutting);
     return;
 }
@@ -176,3 +208,16 @@ function giveMeRandom(y) {
 }
 
 giveMeRandom(6);
+
+/*
+function giveMeRandom(num) {
+    let arrayNumeri = [];
+    for (let i = 0; i < num; i++) {
+        arrayNumeri.push(Math.floor(Math.random() * num));
+    }
+    return;
+}
+
+console.log('Es10');
+console.log(giveMeRandom(10));
+*/
