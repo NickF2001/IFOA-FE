@@ -99,11 +99,19 @@ main {
 
 
 .perfect-gift img {
-   /* float: left; */
-    margin: 10px;
-    vertical-align: top;
+    border-radius: 20px;
+    width: 400px;
+    height: 50vh;
+    object-fit: cover;
+    text-align: center;
+
+    display: inline-block;
+    margin-bottom: 20px;
+
+    box-shadow: 9px 4px 20px #cfcfcf;
 }
 
+/*
 .figure1 img {
     width: 100%;
     margin: 0 auto;
@@ -121,6 +129,7 @@ main {
 .figure2 figcaption{
     font-size: 0.9em;
 }
+*/
 
 /* FOOTER */
 

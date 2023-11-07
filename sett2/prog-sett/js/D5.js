@@ -171,6 +171,13 @@ while (q < numericArray[32]) {
 console.log('Esercizio 9');
 console.log(numericArray[q]);
 
+// Correzione
+let conta = 0;
+while (numericArray[conta] !== 32) {
+  console.log(numericArray[conta]);
+  conta++;
+}
+
 
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
