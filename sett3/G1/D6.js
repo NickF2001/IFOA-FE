@@ -285,16 +285,28 @@ console.log(titoli(movies));
 const myMillennial = movies.filter((movie) => movie.Year > 2000);
 console.log(myMillennial);
 
+const millennio = (array) => {
+  return array.filter((film) => {
+    return parseInt(film.year) > 2000;
+  });
+}
 
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 
-const ages = movies.reduce( function(total, amount){
-  return total + amount;
+const ages = movies.reduce( function(valore, element){
+  return valore + element;
 });
 
 console.log(ages);
+
+// Correzione prof: 
+const sommaAnni = (array) => {
+  return array.reduce((valore, element) => valore + parseInt(element.Year), 0);
+}
+
+console.log(sommaAnni(movies));
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
@@ -304,26 +316,42 @@ let el = 'tt4154796';
 const found = movies.find((el) => el.imdbID);
 console.log(found);
 
+const cercaFilm = (array, id) => {
+  return array.find((film) => film.imdbID === id);
+}
+
+console.log(cercaFilm(movies, 'tt4154756'));
+
+/* ESERCIZIO 14b: ricerca su selezione*/
+
+movies.forEach((film) => {
+  document.getElementById('imdbID').innerHTML += `<option value="${film.imdbID}">${film.Title} - Anno${film.Year} </option>`;
+});
+
+function cerca() {
+  let imdbID = document.getElementById('imdbID').value;
+  /* console.log(imdbID); verifica passo passo se funziona */
+  mioFilm = movies.find((element) => element.imdbID === imdbID);
+  // console.log(mioFilm);
+  document.getElementById('titolo').innerHTML = mioFilm.Title;
+  document.getElementById('anno').innerHTML = mioFilm.Year;
+  document.getElementById('poster').setAttribute('src', mioFilm.Poster);
+}
+
+/* in css #divcontenentetitoloeanno {
+  display: none;
+}
+poi in html mettere nel #div:
+document.getElementById('film').style.display = 'block';
+in questo modo lo sfondo colorato si vedrà solo una volta cliccato per cercare i film
+*/
+
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
 
-
-function trovaIndicePrimoFilmAnno(annoDaCercare, listaFilm) {
-  for (let i = 0; i < listaFilm.length; i++) {
-    if (listaFilm[i].Year === annoDaCercare) {
-      return i;
-    }
-  }
-  // Se nessun film con l'anno specificato viene trovato, restituisci -1 o un valore che indichi l'assenza.
-  return -1;
+const cercaAnno = (array, anno) => {
+  return array.findIndex((element) => parseInt(element.Year) === anno);
 }
 
-const annoDaCercare = '2002'; // Cambia l'anno da cercare come preferisci.
-const indicePrimoFilm = trovaIndicePrimoFilmAnno(annoDaCercare, movies);
-
-if (indicePrimoFilm !== -1) {
-  console.log(`Il primo film uscito nel ${annoDaCercare} ha indice ${indicePrimoFilm}.`);
-} else {
-  console.log(`Nessun film trovato per l'anno ${annoDaCercare}.`);
-}
+console.log(cercaAnno(movies, 1978));
