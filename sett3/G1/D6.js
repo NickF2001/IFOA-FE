@@ -70,6 +70,8 @@ const numeri = [6, 44, 9, 37, 21, 10, 50];
 const risultato = sommaNumeri(numeri);
 console.log("La somma dei numeri nell'array è:", risultato);
 
+
+
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
@@ -104,10 +106,19 @@ console.log(arrayMap);
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
-
+/*
 const arrayEpicode = ["EPICODE", "is", "great"];
 
 const lunghezzaStringa = arrayEpicode.map(function(el) {
+  return el.length;
+})
+console.log(lunghezzaStringa);
+*/
+
+// con arrow
+const arrayEpicode = ["EPICODE", "is", "great"];
+
+const lunghezzaStringa = arrayEpicode.map((el) => {
   return el.length;
 })
 console.log(lunghezzaStringa);
@@ -115,7 +126,17 @@ console.log(lunghezzaStringa);
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+let nuovoArray = [];
+function numeriDispari() {
+  addNumbers.forEach((el) => {
+    if (el % 2 === 0) {
+      nuovoArray.push(el);
+    }
+  })
+}
 
+
+/*
 const dispari = [];
 for (let i = 0; i <= 99; i++) {
   if (i % 2 !== 0) {
@@ -124,6 +145,7 @@ for (let i = 0; i <= 99; i++) {
 }
 
 console.log(dispari);
+*/
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
