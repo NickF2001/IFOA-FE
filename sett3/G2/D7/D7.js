@@ -1,19 +1,18 @@
 /* ESERCIZIO 1
        Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
     */
-
        const changeTitle = function () {
        document.querySelector('h1').innerHTML = 'Modificato';
        }
 
        changeTitle();
 
+
        /* ESERCIZIO 2
         Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
      */
- 
        const addClassToTitle = function () {
-        document.querySelector('h1').className = 'myHeading';
+        document.querySelector('h1').className = 'myHeading'; // seleziono l'h1 e poi aggiungo il nome della classe con ".className = '.nomeClasse';"
        }
 
        addClassToTitle();
@@ -21,7 +20,6 @@
        /* ESERCIZIO 3
         Scrivi una funzione che cambi il testo dei p figli di un div
        */
- 
     /* const changePcontent = function () {
         document.querySelectorAll('div p').innerHTML = 'paragrafi modificati';
        }
@@ -37,11 +35,10 @@
 
        changePcontent();
        
-       
        /* ESERCIZIO 4
         Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
        */
-        
+        /*
        const changeUrls = function () {
         let cambio = document.querySelectorAll('a:not(footer a)');
         cambio.forEach((element) => {
@@ -50,13 +47,19 @@
        };
 
        changeUrls();
-       
+       */
+
+       changeUrl = function () {
+        passo1 = document.querySelectorAll('a:not(footer a)');
+        passo1.forEach((el) => {
+          el.setAttribute('href', 'https://www.google.com');
+        })
+       }
        
  
        /* ESERCIZIO 5
         Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
      */
-
        const addToTheSecond = function () {
         let secondList = document.getElementById('secondList');
         let nuovoElemento = document.createElement('li');
@@ -69,6 +72,15 @@
        /* ESERCIZIO 6
         Scrivi una funzione che aggiunga un paragrafo al primo div
      */
+
+        const addParagraph = function () {
+          let primoDiv = document.getElementById('primoDiv');
+          let nuovoP= document.createElement('p');
+          primoDiv.appendChild(nuovoP);
+        }
+addParagraph();
+
+        /*
  
        const addParagraph = function () {
         document.querySelector('div').innerHTML += '<p>Paragrafo</p>';
@@ -77,6 +89,7 @@
        addParagraph();
 
       // .querySelectorAll('div')[0/1/2/3/etc...]; -> modifica il div alla prima(0)/seconda(1)/... posizione.
+      */
  
        /* ESERCIZIO 7
         Scrivi una funzione che faccia scomparire la prima lista non ordinata
@@ -104,7 +117,17 @@
        /* ESERCIZIO 9
         Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
        */
+        const makeItClickable = function () {
+          let elementoH1 = document.querySelector('h1');
 
+          if(elementoH1){
+            let testo = elementoH1.innerText;
+            testo = testo.slice(0, -1);
+            elementoH1.innerHTML = testo;
+          }
+        }
+
+        makeItClickable();
        /*
        const makeItClickable = function () {
         let h1Element = document.querySelector('h1');
@@ -118,7 +141,7 @@
     
       makeItClickable();
       */
-
+/*
       const makeItClickable = function() {
         const titolo = document.querySelector('h1');
         titolo.onlick = function () {  // in modo che non tolga lettere senza l'arrivo del click
@@ -127,6 +150,7 @@
       };
 
       makeItClickable();
+      */
  
        /* ESERCIZIO 10
         Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
