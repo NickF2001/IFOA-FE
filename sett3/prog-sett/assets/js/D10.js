@@ -583,3 +583,18 @@ addClass();
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
+function isItPrime(numero) {
+  if (numero <= 1) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(numero); i++) {
+    if (numero % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+
+console.log(isItPrime(19));
