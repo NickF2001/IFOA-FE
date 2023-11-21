@@ -211,12 +211,14 @@ header img {
     width: 20%;
 }
 
+/*
 header ul, li {
     display: inline;
     margin-left: 5px;
     margin-top: 20px;
     float: right;
 }
+*/
 
 main::after {
     padding: 30px;
