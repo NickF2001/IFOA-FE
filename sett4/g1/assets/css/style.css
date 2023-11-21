@@ -31,6 +31,7 @@ header nav ul {
 }
 header nav li {
     list-style: none;
+    display: inline;
 }
 header nav li a {
     color: white;
@@ -211,14 +212,11 @@ header img {
     width: 20%;
 }
 
-/*
-header ul, li {
-    display: inline;
+header li {
     margin-left: 5px;
     margin-top: 20px;
-    float: right;
 }
-*/
+
 
 main::after {
     padding: 30px;
