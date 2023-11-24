@@ -22,6 +22,7 @@ body {
     width: 250px;
     height: 200px;
     box-shadow: 5px 5px 7px -1px #3E403B;
+    z-index: 0;
 }
 
 #tasks div:hover {
@@ -39,6 +40,8 @@ body {
     transform-origin: bottom left 60px;
     transform: rotate(0deg);
     transition-duration: 1s;
+    transform: scale(1.2);
+    z-index: 1;
 }
 
 .yellowTask {
@@ -52,6 +55,8 @@ body {
     transform-origin: bottom left 60px;
     transform: rotate(0deg);
     transition-duration: 1s;
+    transform: scale(1.2);
+    z-index: 1;
 }
 
 .purpleTask {
@@ -65,6 +70,8 @@ body {
     transform-origin: bottom left 60px;
     transform: rotate(0deg);
     transition-duration: 1s;
+    transform: scale(1.2);
+    z-index: 1;
 }
 
 .greenTask h3, p, .yellowTask h3, p, .purpleTask h3, p {
