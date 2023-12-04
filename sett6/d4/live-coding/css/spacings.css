@@ -1,0 +1,18 @@
+.ciccio .padding--sm {
+  padding: 12px;
+}
+.ciccio .padding--normal {
+  padding: 16px;
+}
+.ciccio .padding--md {
+  padding: 24px;
+}
+.ciccio .padding--lg {
+  padding: 36px;
+}
+.ciccio .padding--xl {
+  padding: 48px;
+}
+.ciccio .padding--xxl {
+  padding: 160px;
+}/*# sourceMappingURL=spacings.css.map */
