@@ -78,10 +78,11 @@ function addPet() {
 
 function myPetList() {
     const petListContainer = document.getElementById('petList');
+    petListContainer.innerHTML = '';
 
     petList.forEach(pet => {
         const listItem = document.createElement('li');
-        listItem.textContent = `${pet.petName} is ${pet.ownerName}'s animal. Its species is ${pet.species} and its breed is ${pet.breed}.`;
+        listItem.textContent = `${pet.petName} is ${pet.ownerName}'s animal. Its species is ${pet.species} and its breed is ${pet.breed}`;
         petListContainer.appendChild(listItem);
     });
 }
