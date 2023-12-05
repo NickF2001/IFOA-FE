@@ -7,26 +7,35 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <h1 class="mb-4 text-center">Pet Form</h1>
 
-        <form id="petForm" class="border border-light p-5">
-        <label id="petName" class="h4 mb-4 text-center">Pet Name:</label>
-        <input type="text" id="petName" class="form-control mb-4" required>
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="my-4 text-center">Pet Form</h1>
 
-        <label id="ownerName" class="h4 mb-4 text-center">Owner Name:</label>
-        <input type="text" id="ownerName" class="form-control mb-4" required>
+                    <form id="petForm" class="border border-light p-5">
+                    <label id="petName" class="h4 mb-4 text-center">Pet Name:</label>
+                    <input type="text" id="petName" class="form-control mb-4" required>
 
-        <label id="species" class="h4 mb-4 text-center">Species:</label>
-        <input type="text" id="species" class="form-control mb-4" required>
+                    <label id="ownerName" class="h4 mb-4 text-center">Owner Name:</label>
+                    <input type="text" id="ownerName" class="form-control mb-4" required>
 
-        <label id="breed" class="h4 mb-4 text-center">Breed:</label>
-        <input type="text" id="breed" class="form-control mb-4" required>
+                    <label id="species" class="h4 mb-4 text-center">Species:</label>
+                    <input type="text" id="species" class="form-control mb-4" required>
 
-        <button type="button" onclick="addPet()" class="btn btn-info my-4 fs-4">Add Pet</button>
-        </form>
+                    <label id="breed" class="h4 mb-4 text-center">Breed:</label>
+                    <input type="text" id="breed" class="form-control mb-4" required>
 
-    <h2 class="mb-4 text-center">Pet List</h2>
-    <ul id="petList" class="h5 mb-4"></ul>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" onclick="addPet()" class="btn btn-success text-light my-4 fs-4">Add Pet</button>
+                    </div>
+                    
+                    </form>
+
+                <h2 class="mb-4 text-center">Pet List</h2>
+                <ul id="petList" class="h5 mb-4"></ul>
+        </div>
+    </div>
+        
     
     <script src="script.js"></script>
 </body>
