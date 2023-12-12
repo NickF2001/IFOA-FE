@@ -11,7 +11,7 @@
     <!-- HEADER -->
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="https://freelogopng.com/images/all_img/1688364164amazon-logo-transparent.png" alt="Logo" width="100" class="d-inline-block align-text-top" /></a>
+            <a class="navbar-brand" href="./index.html"><img src="https://freelogopng.com/images/all_img/1688364164amazon-logo-transparent.png" alt="Logo" width="100" class="d-inline-block align-text-top" /></a>
           <div class="d-flex">
             <p><a class="text-light" href="./index.html">Back Home</a></p>
           </div>
@@ -32,12 +32,15 @@
                 <input type="number" id="price" placeholder="Price" />
                 <input type="text" id="imageUrl" placeholder="Image URL" />
                 <input type="text" id="brand" placeholder="Brand" />
-                <button type="button" onclick="addOrUpdateProduct()" class="btn btn-warning text-dark">Save</button>
-                <button type="button" onclick="cancelEdit()" class="btn btn-secondary text-white" >Cancel</button>  <!-- Pulsante per annullare l'operazione di modifica -->    
+                <div class="btn-group ms-2">
+                    <button type="button" onclick="addOrUpdateProduct()" class="btn btn-success text-white">Save</button>
+                <button type="button" onclick="cancelEdit()" class="btn btn-secondary text-white">Cancel</button>  <!-- Pulsante per annullare l'operazione di modifica --> 
+                </div>
+                   
               </form>
             </div>
             <div>
-              <a href="index.html" class="btn btn-info text-white mt-4" >Torna alla Home</a>
+              <a href="index.html" class="btn btn-info text-white mt-4">Torna alla Home</a>
             </div>
           </div>
           <!-- Lista dei prodotti -->
