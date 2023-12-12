@@ -5,80 +5,66 @@ const header = {
     'Authorization': token,
     'Accept': 'application/json'
 }
-/*
-const newProduct = {
-    "name": "Nokia 3310",
-    "description": "Indestructible cellphone",
-    "brand": "Nokia",
-    "imageUrl": "https://example.com/3310.jpg",
-    "price": 99
-}
-*/
 
-let products = [];
+const redirectToBackPage = () => {
+    window.location.href ='back.html';
+};
 
-function getProducts() {
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cardsContainer = document.querySelector('.cards-container');
+
+    function createProductCard(product) {
+        const card = document.createElement('div');
+        card.classList.add('card', 'm-3', 'p-3');
+        card.style.width = '18rem';
+
+     const image = document.createElement('img');
+        image.src = product.imageUrl;
+        image.classList.add('card-img-top');
+        image.alt = product.name;
+        image.style.width = '100%';      
+       
+        const cardBody = document.createElement('div');
+        cardBody.classList.add('card-body');
+        cardBody.innerHTML = `
+            <h5 class="card-title">${product.name}</h5>
+            <p class="card-text">${product.description}</p>
+            <p class="card-text">prezzo: ${product.price}€</p>          
+        `;
+
+        const detailsButton = document.createElement('button');
+        detailsButton.classList.add('btn', 'btn-primary', 'mt-3');
+        detailsButton.textContent = 'Dettagli';
+        
+        detailsButton.addEventListener('click', () => {
+            // Reindirizza alla pagina dei dettagli del prodotto
+            window.location.href = `detail.html?id=${product._id}`;
+
+        });
+
+
+        card.appendChild(image);
+        card.appendChild(cardBody);
+        cardBody.appendChild(detailsButton);
+        return card;
+    }
+
     fetch(url, {
-        method: 'GET',
-        headers: header
+             headers: header
     })
     .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        products = data;
-        populatePage(data);
-    })
-}
-
-window.onload = () => {
-    getProducts();
-};
-
-function populatePage(data) {
-    let myRow = document.getElementById('productsRow');
-    myRow.innerHTML = '';
-    data.forEach(el => {
-        let card = `
-        <div class="col-md-4">
-        <div class="card mb-4" style="width: 18rem;">
-            <img class="card-img-top" src="${el.imageUrl}" alt="${el.name}" style="width:100%"; onclick="goToDetails(${el.id})"/>
-            <div class="card-body">
-        <h5 class="card-title" onclick="goToDetails(${el.id})" style="cursor: pointer">${el.name}</h5>
-        <p class="card-text">${el.description}</p>
-        <button
-        type="button"
-        class="btn btn-sm btn-warning"
-        onclick="goToEdit(${el.id})">
-        Edit
-        </button>
-        <button type="button" class="btn btn-primary" onclick="goToDetails('${el._id}')">See details</button>
-    </div>
-        </div>
-        </div>
-        `
-        myRow.innerHTML += card;
-    })
-}
-
-
-const goToDetails = id => {
-    window.location.assign("./details.html?productId=" + id);
-};
-
-const goToEdit = id => {
-    window.location.assign("./back.html?productId="+ id);
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    const viewDetailsButtons = document.querySelectorAll('.view-details-btn');
-
-    viewDetailsButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Ottieni l'ID del prodotto dalla data dell'attributo
-            const productId = button.getAttribute('data-product-id');
-
-            // Reindirizza l'utente alla pagina dei dettagli con l'ID del prodotto
-            window.location.href = `details.html?id=${productId}`;
+    .then(productsData => {
+        productsData.forEach(product => {
+            const card = createProductCard(product);
+            cardsContainer.appendChild(card);
         });
-    });
+    })
+    .catch(error => console.error('Si è verificato un errore:', error));
+
+    const backButton = document.querySelector('.modifyButton'); // Sostituisci '.back-button' con il selettore corretto del bottone
+
+    backButton.addEventListener('click', redirectToBackPage);
+
+   
 });
