@@ -54,7 +54,7 @@ const displayProducts = () => {
         const actionsCell = document.createElement("td");
         const editButton = document.createElement("button");
         editButton.textContent = "Edit";
-        editButton.classList.add("btn", "btn-primary", "editButton");
+        editButton.classList.add("btn", "btn-primary", "editButton", "text-white");
         editButton.addEventListener("click", () => {
             editProduct(product._id);
         });

@@ -11,7 +11,7 @@
     <!-- HEADER -->
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand">Crudazon</a>
+            <a class="navbar-brand" href="#"><img src="https://freelogopng.com/images/all_img/1688364164amazon-logo-transparent.png" alt="Logo" width="100" class="d-inline-block align-text-top" /></a>
           <div class="d-flex">
             <p><a class="text-light" href="./index.html">Back Home</a></p>
           </div>
@@ -23,21 +23,21 @@
     <main>
         <div class="container-fluid">
           <div class="row my-5">
-            <h2 class="">BACK- OFFICE PAGE</h2>
+            <h2 class="">BACK-OFFICE PAGE</h2>
             <div >
-              <form id="productForm" class="center">
+              <form id="productForm" class="center p-3 border border-secondary">
                 <input type="hidden" id="editingProductId" />
                 <input type="text" id="name" placeholder="Name" />
                 <input type="text" id="description" placeholder="Description" />
                 <input type="number" id="price" placeholder="Price" />
                 <input type="text" id="imageUrl" placeholder="Image URL" />
                 <input type="text" id="brand" placeholder="Brand" />
-                <button type="button"  onclick="addOrUpdateProduct()" class="btn btn-primary"> Save </button>
-                <button type="button" onclick="cancelEdit()" class="btn btn-primary" >  Cancel     </button>  <!-- Pulsante per annullare l'operazione di modifica -->    
+                <button type="button" onclick="addOrUpdateProduct()" class="btn btn-warning text-dark">Save</button>
+                <button type="button" onclick="cancelEdit()" class="btn btn-secondary text-white" >Cancel</button>  <!-- Pulsante per annullare l'operazione di modifica -->    
               </form>
             </div>
             <div>
-              <a href="index.html" class="btn btn-primary mt-4" >Torna alla Home</a>
+              <a href="index.html" class="btn btn-info text-white mt-4" >Torna alla Home</a>
             </div>
           </div>
           <!-- Lista dei prodotti -->
@@ -57,7 +57,7 @@
             </table>
           </div>
   
-          <button type="button" class="btn btn-danger"  onclick="deleteSelectedProducts()"  >  Delete Selected </button>
+          <button type="button" class="btn btn-danger"  onclick="deleteSelectedProducts()">Delete Selected</button>
           
         </div>
       </main>

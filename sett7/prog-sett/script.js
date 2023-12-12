@@ -6,10 +6,6 @@ const header = {
     'Accept': 'application/json'
 }
 
-const redirectToBackPage = () => {
-    window.location.href ='back.html';
-};
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const cardsContainer = document.querySelector('.cards-container');
@@ -34,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         const detailsButton = document.createElement('button');
-        detailsButton.classList.add('btn', 'btn-primary', 'mt-3');
+        detailsButton.classList.add('btn', 'btn-info', 'mt-3');
         detailsButton.textContent = 'Dettagli';
         
         detailsButton.addEventListener('click', () => {
@@ -61,10 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     })
     .catch(error => console.error('Si è verificato un errore:', error));
-
-    const backButton = document.querySelector('.modifyButton'); // Sostituisci '.back-button' con il selettore corretto del bottone
-
-    backButton.addEventListener('click', redirectToBackPage);
 
    
 });

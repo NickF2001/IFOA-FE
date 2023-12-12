@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const productDetailsContainer = document.getElementById('productDetails');
             const viewProduct = `
                 <div class="product-container d-flex">
-                    <img src="${product.imageUrl}" alt="${product.name}" class="product-image detail-img">
+                    <img src="${product.imageUrl}" alt="${product.name}" class="product-image detail-img" style="width:65%">
                     <div class="product-details">
                         <h2>${product.name}</h2>
                         <p><strong>Descrizione:</strong> ${product.description}</p>
                         <p><strong>Prezzo:</strong> ${product.price} €</p>
-                        <a href="homepage.html" class="btn btn-primary mt-3">Torna alla Home</a>
+                        <a href="index.html" class="btn btn-info mt-3">Torna alla Home</a>
                     </div>
                 </div>
             `;
