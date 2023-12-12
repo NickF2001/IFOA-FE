@@ -93,3 +93,59 @@ function clearForm() {
     document.getElementById('species').value = '';
     document.getElementById('breed').value = '';
 }
+
+// correzione col prof
+/*
+Definizione delle variabili:
+const petName = document.getElementById('petName').value;
+const ownerName = document.getElementById('ownerName').value;
+const species = document.getElementById('species').value;
+const breed = document.getElementById('breed').value;
+
+let list = document.getElementById('petList');
+const button = document.getElementById('button');
+
+const pets = [];
+
+class Pet {
+    constructor(petName, ownerName, species, breed) {
+        this.petName = petName;
+        this.ownerName = ownerName;
+        this.species = species;
+        this.breed = breed;
+    }
+
+    checkSameOwner(pet) {
+        if (this.ownerName === pet.ownerName) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+button.onlick = function () {
+    let newAnimal = new Pet(
+        document.getElementById('petName').value,
+        document.getElementById('ownerName').value,
+        document.getElementById('species').value,
+        document.getElementById('breed').value
+    )
+
+    petList.push(newAnimal);
+    myLista();
+    document.getElementById('petName').value = '';
+    document.getElementById('ownerName').value = '';
+    document.getElementById('species').value = '';
+    document.getElementById('breed').value = '';
+
+    function myLista() {
+        petList.innerHTML = '';
+        petList.forEach(animal => {
+            let newLi = document.createElement('li');
+            newLi.textContent = `${animal.petName} is ${animal.ownerName}'s animal. Its species is ${animal.species} and its breed is ${animal.breed}`;
+            petList.appendChild(listItem);
+        });
+    }
+}
+*/
