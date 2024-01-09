@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button'
 import FantasyBook from '../../books/fantasy.json';
 import BookButton from './BookButton';
+import './BookCard.css'
 
 const BookCard = () => {
   const [category, setCategory] = useState(FantasyBook);
@@ -12,9 +13,10 @@ const BookCard = () => {
   <BookButton setCategory={setCategory} />
 
   <div className='d-flex flex-wrap gap-4 justify-content-center'>
-    {category.map((book, index) => {
+    return (
+      {category.map((book, index) => {
       return (
-      <Card key={book.asin} style={{ width: '18rem' }}>
+      <Card key={book.asin} style={{ width: '18rem' }} className="BookCard text-light">
         <Card.Img variant="top" src={book.img} />
         <Card.Body>
           <Card.Title>{book.title}</Card.Title>
@@ -26,6 +28,8 @@ const BookCard = () => {
       </Card>
     )
     })}
+    )
+    
   </div>
   </>
   );
