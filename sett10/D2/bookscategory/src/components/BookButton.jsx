@@ -10,11 +10,11 @@ const BookButton = ({setCategory}) => {
   return (
     <>
     <Container>
-      <Button className="mx-2 my-4 border-0 btn-success" onClick={() => setCategory(FantasyBook)}>Fantasy</Button>
-      <Button className="mx-2 my-4 border-0 btn-warning" onClick={() => setCategory(HistoryBook)}>History</Button>
-      <Button className="mx-2 my-4 border-0 btn-dark" onClick={() => setCategory(HorrorBook)}>Horror</Button>
-      <Button className="mx-2 my-4 border-0 btn-danger" onClick={() => setCategory(RomanceBook)}>Romance</Button>
-      <Button className="mx-2 my-4 border-0 btn-primary" onClick={() => setCategory(SciFiBook)}>SciFi</Button>
+      <Button className="mx-2 mb-4 border-0 btn-success" onClick={() => setCategory(FantasyBook)}>Fantasy</Button>
+      <Button className="mx-2 mb-4 border-0 btn-warning" onClick={() => setCategory(HistoryBook)}>History</Button>
+      <Button className="mx-2 mb-4 border-0 btn-dark" onClick={() => setCategory(HorrorBook)}>Horror</Button>
+      <Button className="mx-2 mb-4 border-0 btn-danger" onClick={() => setCategory(RomanceBook)}>Romance</Button>
+      <Button className="mx-2 mb-4 border-0 btn-primary" onClick={() => setCategory(SciFiBook)}>SciFi</Button>
     </Container>
     </>
   );
