@@ -11,7 +11,7 @@ const BookCard = () => {
   <>
   <BookButton setCategory={setCategory} />
 
-  <div className='d-flex flex-wrap gap-4'>
+  <div className='d-flex flex-wrap gap-4 justify-content-center'>
     {category.map((book, index) => {
       return (
       <Card key={book.asin} style={{ width: '18rem' }}>
