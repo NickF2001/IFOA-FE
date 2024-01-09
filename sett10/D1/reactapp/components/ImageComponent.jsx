@@ -18,11 +18,10 @@ export default ImageComponent;
 
 class ImageComponent extends Component {
     render () {
-        const imageUrl = 'https://source.unsplash.com/random';
         return (
             <div>
-            <img src={imageUrl}
-            alt="Descrizione dell'immagine"
+            <img src={this.props.imageUrl}
+            alt={this.props.imageAlt}
             style={{ width: '20%' }} />
             </div>
         )

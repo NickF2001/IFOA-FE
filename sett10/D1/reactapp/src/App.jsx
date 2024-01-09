@@ -7,6 +7,8 @@ import ImageComponent from '../components/ImageComponent'
 
 function App() {
   const [count, setCount] = useState(0)
+  const imageUrl = 'https://source.unsplash.com/random';
+  const imageAlt = 'immagine casuale';
 
   return (
     <>
@@ -28,7 +30,7 @@ function App() {
         </p>
           <ButtonComponent label='Click here'/>
       </div>
-      <ImageComponent />
+      <ImageComponent src={imageUrl} alt={imageAlt}/>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
