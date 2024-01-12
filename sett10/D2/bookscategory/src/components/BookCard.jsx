@@ -15,8 +15,9 @@ const BookCard = () => {
   <div className='d-flex flex-wrap gap-4 justify-content-center'>
     return (
       {category.map((book, index) => {
+        const [selected, setSelected] = useState(false);
       return (
-      <Card key={book.asin} style={{ width: '18rem' }} className="BookCard text-light">
+      <Card key={book.asin} style={{ width: '18rem', border: selected && '3px solid white'}} className="BookCard text-light" onClick={() => setSelected(!selected)}>
         <Card.Img variant="top" src={book.img} />
         <Card.Body>
           <Card.Title>{book.title}</Card.Title>
