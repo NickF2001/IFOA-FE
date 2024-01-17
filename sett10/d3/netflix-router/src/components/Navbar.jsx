@@ -22,7 +22,7 @@ const NavBarHome = () => {
           <Nav className="me-auto d-flex gap-3">
             <Link className='link' to='/'>Home</Link>
             <Link className='link' to="/TvShows">TV Shows</ Link>
-            <Link className='link' to="/Films">Movies</Link>
+            <Link className='link' to="/Movies">Movies</Link>
           </Nav>
         
           <Nav className='d-flex align-items-center justify-content-end gap-3'> 
