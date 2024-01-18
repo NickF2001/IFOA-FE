@@ -1,0 +1,10 @@
+.link {
+    text-decoration: none;
+    color: #727272;
+}
+
+.link:hover {
+    color:white;
+    transform: scale(1.01);
+    cursor: pointer;
+}

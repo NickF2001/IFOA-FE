@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:wght@700&family=Open+Sans&family=Outfit&family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 40px;
+    box-sizing: border-box;
+    line-height: 1.1;
+    font-size: 1.5em;
+    font-family: 'Indie Flower', cursive;
+    background-color: #666666;
+}
+
+#tasks {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 40px;
+    justify-content: center;
+}
+
+#tasks div {
+    width: 250px;
+    height: 200px;
+    box-shadow: 5px 5px 7px -1px #3E403B;
+    z-index: 0;
+}
+
+#tasks div:hover {
+    box-shadow: 5px 5px 5px 1px #1D1F1B;
+}
+
+.greenTask {
+    background: rgb(158,182,160);
+    background: linear-gradient(0deg, rgba(158,182,160,1) 0%, rgba(198,245,200,1) 100%);
+    transform-origin: bottom left 60px;
+    transform: rotate(2deg);
+}
+
+.greenTask:hover {
+    transform-origin: bottom left 60px;
+    transform: rotate(0deg);
+    transition-duration: 1s;
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.yellowTask {
+    background: rgb(189,189,162);
+    background: linear-gradient(0deg, rgba(189,189,162,1) 0%, rgba(252,252,202,1) 100%);
+    transform-origin: bottom left 60px;
+    transform: rotate(-3deg);
+}
+
+.yellowTask:hover {
+    transform-origin: bottom left 60px;
+    transform: rotate(0deg);
+    transition-duration: 1s;
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.purpleTask {
+    background: rgb(138,140,153);
+    background: linear-gradient(0deg, rgba(138,140,153,1) 0%, rgba(202,201,245,1) 100%);
+    transform-origin: bottom left 60px;
+    transform: rotate(-5deg);
+}
+
+.purpleTask:hover {
+    transform-origin: bottom left 60px;
+    transform: rotate(0deg);
+    transition-duration: 1s;
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.greenTask h3, p, .yellowTask h3, p, .purpleTask h3, p {
+    display: flex;
+    justify-content: center;
+}
+
+.greenTask h3, .yellowTask h3, .purpleTask h3 {
+    padding-top: 15%;
+}
+
+.greenTask p, .yellowTask p, .purpleTask p {
+    position: relative;
+    bottom: 15px;
+}
